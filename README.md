@@ -39,11 +39,15 @@ Following is the plot of different shading techniques with varying number of lig
 
 **Optimization: g-buffer**
 
+<p align="center"><img src="https://github.com/DishaJindal/Project6-WebGL-Clustered-Deferred-Forward-Plus/blob/master/img/octa.png" width="400"></p>
+
 To optimize the deferred rendering technique further, I reduced the number of number of g-buffers used. Earlier, I was using 3 vectors to store normal, position and color information which where reduced to 2 by encoding the normal vector using `Octahedron normal vector encoding` technique. As we can see from the following plot, it helps in improving the performance which increases with increase in the number of lights. 
 
 <p align="center"><img src="https://github.com/DishaJindal/Project6-WebGL-Clustered-Deferred-Forward-Plus/blob/master/img/gbuffer.png" width="600"></p>
 
 **Blinn-Phong reflection**
+
+<p align="center"><img src="https://github.com/DishaJindal/Project6-WebGL-Clustered-Deferred-Forward-Plus/blob/master/img/blinn.png" width="400"></p>
 
 To simulate better reflections, I implemented blinn-phong reflections in deferred shading. It subtely improved the scene and due to some additional computation it has slight affect on the performance of the renderer which can be seen in the following graph. This being a constant factor computation addition, the gap doesn't increase with the increase in the number of lights.
 
